@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -x
+set -e
+
+git archive --format=tar master | gzip > ../hellodaemon_0.2.orig.tar.gz
+
+debuild
